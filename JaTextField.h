@@ -10,4 +10,6 @@
 
 @interface JaTextField : UITextField
 
+-(void)setBehaviorForReturnKey:(void (^)(void))actionOnReturn;
+
 @end

@@ -16,7 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    [self.lastJaText setBehaviorForReturnKey:^{
+        UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"This is the last text field" message:@"And this is a pre-defined action" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+        [alert show];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

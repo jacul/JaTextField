@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JaTextField.h"
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet JaTextField *lastJaText;
 
 @end
 

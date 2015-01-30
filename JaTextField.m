@@ -8,6 +8,12 @@
 
 #import "JaTextField.h"
 
+@interface JaTextField (){
+    void(^action)(void);
+}
+
+@end
+
 @implementation JaTextField
 
 - (instancetype)initWithCoder:(NSCoder *)coder
@@ -21,6 +27,13 @@
 
 
 -(void)keyboardDidEnter:(id)sender{
+    if (action) {
+        //A callback was setup, invoke it
+        action();
+        return;
+    }
+    
+    //So find the next nearest text field
     UIView* superview = self.superview;
     
     //Checking rect is an area containing all views underneath the current view
@@ -49,4 +62,7 @@
     }
 }
 
+-(void)setBehaviorForReturnKey:(void (^)(void))actionOnReturn{
+    action = actionOnReturn;
+}
 @end

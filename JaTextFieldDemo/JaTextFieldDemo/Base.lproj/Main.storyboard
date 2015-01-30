@@ -64,6 +64,9 @@
                             <constraint firstItem="WOT-SX-Cur" firstAttribute="top" secondItem="ZtN-oe-P2W" secondAttribute="bottom" constant="15" id="kQ1-B5-u1t"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lastJaText" destination="fnE-Fn-xG9" id="5CQ-Bw-6TT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
